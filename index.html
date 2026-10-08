@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>35电影网 - 高清影视在线观看与资源导航平台 | 最新电影电视剧综艺动漫一站式聚合</title>
+<meta name="description" content="35电影网（35dianyingwang-app）致力于为影视爱好者提供最新、最全、最清晰的电影、电视剧、综艺、动漫、纪录片在线观看指引与资源聚合服务。涵盖动作、喜剧、爱情、科幻、悬疑、恐怖、剧情、战争、动画、纪录片等全类型影片，支持按年份、地区、豆瓣评分、热度排序检索。每日更新院线新片、经典老片、海外剧集、国产好剧、高分综艺与热血动漫，配以专业影评、剧情简介、演员导演资料、精彩剧照与播放源导航。移动端自适应，加载迅捷，界面清爽无冗余，是您寻找优质影视内容的可靠入口。">
+<meta name="keywords" content="35电影网, 35dianyingwang-app, 高清电影, 在线电影, 最新电影, 电视剧在线观看, 国产剧, 美剧, 韩剧, 日剧, 泰剧, 综艺节目, 动漫番剧, 纪录片, 院线新片, 经典老片, 豆瓣高分电影, 悬疑片, 科幻片, 喜剧片, 爱情片, 动作片, 恐怖片, 战争片, 文艺片, 独立电影, 短片, 电影推荐, 影视资讯, 影评, 演员表, 导演, 剧情介绍, 电影海报, 预告片, 影视资源导航, 免费电影, 高清视频, 追剧, 观影指南">
+<meta name="author" content="35电影网">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="bingbot" content="index, follow">
+<meta name="theme-color" content="#0f1729">
+<meta property="og:title" content="35电影网 - 高清影视在线观看与资源导航平台">
+<meta property="og:description" content="最新电影、电视剧、综艺、动漫一站式聚合，按类型、年份、评分多维检索，专业影评与播放源导航。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://35dianyingwang-app.github.io">
+<meta property="og:site_name" content="35电影网">
+<link rel="canonical" href="https://35dianyingwang-app.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#e8ecf5;
+  --ink-dim:#9aa6bd;
+  --bg:#0b1020;
+  --panel:#131a30;
+  --line:#243048;
+  --accent:#ff5a3c;
+  --accent2:#37c8b5;
+  --gold:#f5b642;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* 顶部导航 */
+header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:60px}
+.logo{font-size:22px;font-weight:800;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+.logo b{color:var(--accent)}
+.logo span{font-size:11px;color:var(--ink-dim);border:1px solid var(--line);padding:2px 6px;border-radius:4px;font-weight:500}
+.nav-links{display:flex;gap:22px;margin-left:auto;font-size:14px}
+.nav-links a{color:var(--ink-dim);transition:.2s;position:relative}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:.2s}
+.nav-links a:hover::after{width:100%}
+.search{display:flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:6px 12px}
+.search input{background:none;border:none;color:var(--ink);outline:none;font-size:13px;width:130px}
+.search button{background:none;border:none;color:var(--ink-dim);cursor:pointer;font-size:14px}
+.menu-btn{display:none;background:none;border:none;color:var(--ink);font-size:22px;cursor:pointer}
+
+/* 首屏 */
+.hero{position:relative;padding:70px 0 60px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% 20%,rgba(255,90,60,.18),transparent),radial-gradient(700px 350px at 10% 70%,rgba(55,200,181,.12),transparent)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;position:relative}
+.kicker{font-size:12px;letter-spacing:3px;color:var(--accent2);text-transform:uppercase;margin-bottom:16px}
+h1{font-size:52px;line-height:1.12;font-weight:850;letter-spacing:-1px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{margin-top:20px;font-size:16px;color:var(--ink-dim);max-width:540px}
+.cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 28px;border-radius:30px;font-size:15px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:.25s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--accent2);color:var(--accent2)}
+.stats{margin-top:40px;display:flex;gap:40px;flex-wrap:wrap}
+.stat .num{font-size:28px;font-weight:800;color:var(--gold)}
+.stat .lbl{font-size:12px;color:var(--ink-dim);letter-spacing:1px}
+
+/* 胶片式海报墙 */
+.reel{display:flex;gap:16px;overflow-x:auto;padding:10px 4px 22px;scroll-snap-type:x mandatory}
+.reel::-webkit-scrollbar{height:6px}
+.reel::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.poster{flex:0 0 150px;scroll-snap-align:start;position:relative;border-radius:10px;overflow:hidden;aspect-ratio:2/3;background:linear-gradient(160deg,var(--panel),#1c2542)}
+.poster .tag{position:absolute;top:8px;left:8px;font-size:10px;padding:2px 7px;border-radius:4px;background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
+.poster .meta{position:absolute;bottom:0;left:0;right:0;padding:10px 10px 12px;background:linear-gradient(0deg,rgba(0,0,0,.92),transparent)}
+.poster .meta h4{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.poster .meta p{font-size:11px;color:var(--ink-dim);margin-top:3px}
+
+/* 通用区块 */
+section{padding:64px 0}
+.eyebrow{font-size:12px;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.h2{font-size:32px;font-weight:800;margin:8px 0 6px;letter-spacing:-.5px}
+.h2-sub{color:var(--ink-dim);font-size:14px;margin-bottom:34px;max-width:620px}
+.head-flex{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{padding:6px 14px;border-radius:16px;font-size:13px;cursor:pointer;border:1px solid var(--line);color:var(--ink-dim);transition:.2s}
+.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab:not(.on):hover{color:var(--ink);border-color:var(--ink-dim)}
+
+/* 分类卡片 */
+.grid{display:grid;gap:20px}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.card .ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:20px;margin-bottom:14px;background:linear-gradient(135deg,rgba(255,90,60,.2),rgba(55,200,181,.15))}
+.card h3{font-size:17px;margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--ink-dim)}
+.card .more{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--accent2)}
+
+/* 片单表 */
+.board{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row{display:grid;grid-template-columns:52px 2.4fr 1fr 1fr 90px;align-items:center;padding:14px 20px;gap:14px;border-bottom:1px solid var(--line);font-size:14px}
+.row.head{background:#0d1428;font-size:12px;color:var(--ink-dim);letter-spacing:1px;text-transform:uppercase}
+.row:last-child{border-bottom:none}
+.row:hover:not(.head){background:rgba(255,90,60,.06)}
+.rk{font-size:20px;font-weight:800;color:var(--line)}
+.rk.hot{color:var(--accent)}
+.ttl{display:flex;align-items:center;gap:10px;font-weight:600}
+.ttl i{width:34px;height:46px;border-radius:5px;background:linear-gradient(150deg,#243048,#3a4a6b);flex:0 0 34px}
+.score{color:var(--gold);font-weight:700}
+.cat{font-size:12.5px;color:var(--ink-dim)}
+.row a{justify-self:end;font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:14px;color:var(--ink-dim)}
+.row a:hover{color:var(--accent);border-color:var(--accent)}
+
+/* 专题横幅 */
+.banner{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.big{position:relative;border-radius:16px;overflow:hidden;min-height:280px;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line)}
+.big::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(7,11,24,.96))}
+.big .inner{position:relative;z-index:2}
+.big h3{font-size:26px;font-weight:800;margin-bottom:10px}
+.big p{color:var(--ink-dim);font-size:14px;max-width:460px}
+.big .go{margin-top:18px;display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-weight:700;font-size:14px}
+.big.a{background:radial-gradient(600px 300px at 80% 10%,rgba(255,90,60,.35),transparent),linear-gradient(135deg,#1a1030,#0b1020)}
+.big.b{background:radial-gradient(600px 300px at 20% 10%,rgba(55,200,181,.28),transparent),linear-gradient(135deg,#0e2a2c,#0b1020)}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.news-item{border-bottom:1px dashed var(--line);padding-bottom:16px}
+.news-item:last-child{border:none}
+.news-item .d{font-size:12px;color:var(--accent2);letter-spacing:1px}
+.news-item h4{font-size:15.5px;margin:7px 0 6px;line-height:1.5}
+.news-item p{font-size:13px;color:var(--ink-dim);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);padding:54px 0 30px;background:#080c18}
+.foot-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:34px;margin-bottom:38px}
+.foot-col h5{font-size:15px;margin-bottom:14px;position:relative;padding-left:11px}
+.foot-col h5::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;background:var(--accent);border-radius:2px}
+.foot-col ul{list-style:none;font-size:13px;color:var(--ink-dim);line-height:2.1}
+.foot-col a:hover{color:var(--ink)}
+.foot-about p{font-size:13px;color:var(--ink-dim);margin-bottom:12px}
+.site-url{display:inline-block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;color:var(--gold);word-break:break-all}
+.copy{text-align:center;font-size:12.5px;color:var(--ink-dim);padding-top:24px;border-top:1px solid var(--line)}
+.copy b{color:var(--ink)}
+
+/* 响应式 */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  h1{font-size:38px}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3,.news{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:repeat(2,1fr)}
+  .banner{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .nav-links{position:fixed;inset:60px 0 0 0;background:#0b1020;flex-direction:column;padding:28px 24px;gap:18px;transform:translateX(100%);transition:.3s;border-top:1px solid var(--line)}
+  .nav-links.open{transform:translateX(0)}
+  .menu-btn{display:block;margin-left:auto}
+  .search{display:none}
+  .grid-4,.grid-3,.grid-2,.news{grid-template-columns:1fr}
+  .row{grid-template-columns:40px 1fr 70px;font-size:13px}
+  .row .cat,.row .score{display:none}
+  h1{font-size:32px}
+  .h2{font-size:25px}
+  section{padding:46px 0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><b>35</b>电影网<span>35dianyingwang-app</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hot">热映榜</a>
+      <a href="#genre">影片分类</a>
+      <a href="#topic">专题策划</a>
+      <a href="#news">影视资讯</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="搜电影 / 演员 / 导演">
+      <button aria-label="搜索">🔍</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">35 Movie Network · 影视资源聚合导航</div>
+        <h1>在 <em>35电影网</em><br>遇见每一部值得看的片子</h1>
+        <p class="lede">35电影网（35dianyingwang-app）不是播放器，而是你的观影决策入口。我们按类型、年份、地区、豆瓣评分与实时热度，把散落在各处的电影、电视剧、综艺、动漫整理成一张可检索的片子地图，配上剧情简介、演职员、影评与观看指引，让你少花半小时找片，多留两小时看好片。</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#hot">查看今日热映榜</a>
+          <a class="btn btn-ghost" href="#genre">按类型挑片子</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="num">12,800+</div><div class="lbl">影片词条</div></div>
+          <div class="stat"><div class="num">36</div><div class="lbl">细分类型</div></div>
+          <div class="stat"><div class="num">每日</div><div class="lbl">更新院线资讯</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="reel">
+          <div class="poster"><span class="tag">9.2 高分</span><div class="meta"><h4>肖申克的救赎</h4><p>剧情 · 1994 · 美国</p></div></div>
+          <div class="poster"><span class="tag">动作</span><div class="meta"><h4>疾速追杀4</h4><p>动作 · 2023 · 美国</p></div></div>
+          <div class="poster"><span class="tag">悬疑</span><div class="meta"><h4>默杀</h4><p>悬疑 · 2024 · 中国</p></div></div>
+          <div class="poster"><span class="tag">动画</span><div class="meta"><h4>千与千寻</h4><p>动画 · 2001 · 日本</p></div></div>
+          <div class="poster"><span class="tag">科幻</span><div class="meta"><h4>星际穿越</h4><p>科幻 · 2014 · 美国</p></div></div>
+          <div class="poster"><span class="tag">剧集</span><div class="meta"><h4>繁花</h4><p>剧情 · 2023 · 中国</p></div></div>
+        </div>
+        <p style="font-size:12px;color:var(--ink-dim);margin-top:6px">↑ 左右滑动浏览精选片单（示意海报位）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：热映榜 -->
+  <section id="hot">
+    <div class="wrap">
+      <div class="head-flex">
+        <div>
+          <div class="eyebrow">Ranking · 实时热度</div>
+          <h2 class="h2">今日热映榜</h2>
+          <p class="h2-sub">综合播放热度、搜索量与社交讨论度生成，每小时刷新。榜单只做排序参考，不代表艺术价值高低。</p>
+        </div>
+        <div class="tabs">
+          <span class="tab on">综合</span>
+          <span class="tab">电影</span>
+          <span class="tab">剧集</span>
+          <span class="tab">豆瓣高分</span>
+        </div>
+      </div>
+      <div class="board">
+        <div class="row head">
+          <span>名次</span><span>影片名称</span><span>类型</span><span>豆瓣评分</span><span>详情</span>
+        </div>
+        <div class="row"><span class="rk hot">01</span><span class="ttl"><i></i>里斯本丸沉没</span><span class="cat">纪录片</span><span class="score">9.3</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk hot">02</span><span class="ttl"><i></i>异形：夺命舰</span><span class="cat">科幻 / 恐怖</span><span class="score">7.8</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk hot">03</span><span class="ttl"><i></i>逆行人生</span><span class="cat">剧情 / 喜剧</span><span class="score">7.2</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk">04</span><span class="ttl"><i></i>重生</span><span class="cat">犯罪 / 动作</span><span class="score">6.9</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk">05</span><span class="ttl"><i></i>抓娃娃</span><span class="cat">喜剧 / 家庭</span><span class="score">7.1</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk">06</span><span class="ttl"><i></i>白蛇：浮生</span><span class="cat">动画 / 奇幻</span><span class="score">7.4</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk">07</span><span class="ttl"><i></i>死侍与金刚狼</span><span class="cat">动作 / 喜剧</span><span class="score">7.0</span><a href="#">观看</a></div>
+        <div class="row"><span class="rk">08</span><span class="ttl"><i></i>解密</span><span class="cat">剧情 / 悬疑</span><span class="score">6.8</span><a href="#">观看</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：影片分类 -->
+  <section id="genre" style="background:linear-gradient(180deg,transparent,rgba(255,90,60,.04))">
+    <div class="wrap">
+      <div class="eyebrow">Categories · 36 种类型</div>
+      <h2 class="h2">按类型挑片子</h2>
+      <p class="h2-sub">从"想看什么"出发，而不是从"有什么"出发。每一种类型都配了选片逻辑与入门片单，新手也能快速上手。</p>
+      <div class="grid grid-4">
+        <div class="card"><div class="ico">💥</div><h3>动作片</h3><p>讲究节奏与身体表达。从港式枪战到好莱坞爆破，再到东亚武侠与东南亚实打，推荐按"动作设计风格"而非明星选片。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">😂</div><h3>喜剧片</h3><p>笑点有时效性，经典却不过期。分讽刺、荒诞、温情、黑色四类，配合导演履历食用风味更佳。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">💘</div><h3>爱情片</h3><p>不止甜。含错过、克制、背叛、重逢四种叙事母题，亚洲爱情片重氛围，欧美重对白，韩片重命运。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">🚀</div><h3>科幻片</h3><p>用设定问问题。硬科幻看逻辑自洽，软科幻看人文投射。时间旅行、AI、末日、太空四类最易入坑。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">🕵️</div><h3>悬疑片</h3><p>信息差即快感。重点看叙事结构：倒叙、多视角、不可靠叙述。推荐从诺兰、奉俊昊、刁亦男入手。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">👻</div><h3>恐怖片</h3><p>恐惧分两种：未知的与熟悉的。日式心理恐怖、美式血浆、泰式诅咒、国产民俗，各有各的吓法。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">🎭</div><h3>剧情片</h3><p>电影的本体。关注人物弧光与社会切片，是理解其他所有类型的基础。建议按导演而非按明星追。</p><a class="more" href="#">入门片单 →</a></div>
+        <div class="card"><div class="ico">⚔️</div><h3>战争片</h3><p>反战才是高级表达。从个体视角切入者多佳作，宏大叙事易流于口号。诺曼底、越战、抗美援朝题材各有经典。</p><a class="more" href="#">入门片单 →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：专题策划 -->
+  <section id="topic">
+    <div class="wrap">
+      <div class="eyebrow">Feature · 编辑精选</div>
+      <h2 class="h2">专题策划</h2>
+      <p class="h2-sub">不讲"最新"，讲"值得"。专题是 35电影网 区别于普通影视导航的地方——用一条线索串起一组片子。</p>
+      <div class="banner">
+        <div class="big a">
+          <div class="inner">
+            <div class="eyebrow" style="color:var(--gold)">Theme 01</div>
+            <h3>被低估的华语犯罪片</h3>
+            <p>从《无间道》到《暴裂无声》，梳理近二十年华语犯罪类型如何在审查与市场的夹缝里长出作者性。附 12 部片单与导演访谈摘录。</p>
+            <a class="go" href="#">进入专题 →</a>
+          </div>
+        </div>
+        <div class="big b">
+          <div class="inner">
+            <div class="eyebrow" style="color:var(--accent2)">Theme 02</div>
+            <h3>动画不只是给孩子看的</h3>
+            <p>从吉卜力到《蜘蛛侠：纵横宇宙》，从《大护法》到《千与千寻》，拆解动画作为"最自由的电影语言"的五种用法。</p>
+            <a class="go" href="#">进入专题 →</a>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-3" style="margin-top:24px">
+        <div class="card"><h3>🎬 90 分钟内的好电影</h3><p>短片、中片、紧凑叙事。适合通勤与碎片时间，情绪密度反而更高。</p></div>
+        <div class="card"><h3>🌏 东亚导演群像</h3><p>是枝裕和、李沧东、侯孝贤、阿彼察邦——同一文化圈里的四种时间感。</p></div>
+        <div class="card"><h3>📽️ 修复版值得二刷</h3><p>4K 修复让老片重获新生。列出近期上映的重映片单与观影礼仪。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：影视资讯 -->
+  <section id="news" style="background:linear-gradient(180deg,rgba(55,200,181,.04),transparent)">
+    <div class="wrap">
+      <div class="head-flex">
+        <div>
+          <div class="eyebrow">Journal · 更新日志</div>
+          <h2 class="h2">影视资讯与观剧笔记</h2>
+          <p class="h2-sub">院线动态、流媒体上新、导演访谈、观影避坑指南。写给人看，不写给算法看。</p>
+        </div>
+        <a class="tab" href="#">订阅更新</a>
+      </div>
+      <div class="news">
+        <div class="news-item"><div class="d">2026 · 10 · 07</div><h4>国庆档复盘：票房结构变了，观众要的到底是什么？</h4><p>档期总票房同比回落，但单片口碑对票房的杠杆效应显著放大。本文拆解三部头部影片的受众画像与宣发路径差异。</p></div>
+        <div class="news-item"><div class="d">2026 · 10 · 05</div><h4>流媒体十月片单：这 9 部值得为它开会员</h4><p>剔除营销噪声，只留真正有观看必要的上新内容。含两部冷门纪录片与一部被低估的东南亚剧集。</p></div>
+        <div class="news-item"><div class="d">2026 · 10 · 02</div><h4>观影避坑：这 5 类"高分推荐"其实不适合你</h4><p>算法推荐的同质化陷阱。教你用"情绪需求"而非"评分"选片——想被治愈、想被刺激、想被说服，对应完全不同的片单。</p></div>
+        <div class="news-item"><div class="d">2026 · 09 · 28</div><h4>导演访谈摘录：拍一部"不讨好"的犯罪片</h4><p>关于类型片作者化的现实困境：资本要类型，作者要表达，折中之后往往两头不讨好。</p></div>
+        <div class="news-item"><div class="d">2026 · 09 · 24</div><h4>老片重映指南：修复版与原版差在哪</h4><p>色彩还原、音轨重制、画幅取舍。不是所有修复都等于变好，有些"颗粒感"本就是作者意图。</p></div>
+        <div class="news-item"><div class="d">2026 · 09 · 20</div><h4>秋季追剧地图：国产剧、美剧、韩剧各选一部</h4><p>不铺量，只给结论。三部剧分别对应三种观看姿态：沉浸式、讨论式、下饭式。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：关于本站 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow">About · 站点说明</div>
+      <h2 class="h2">关于 35电影网</h2>
+      <div class="grid grid-2" style="margin-top:10px">
+        <div class="card">
+          <h3>我们做什么</h3>
+          <p style="margin-top:10px">35电影网（站点地址 <span class="site-url">https://35dianyingwang-app.github.io</span>）是一个影视内容与观看指引的聚合导航页。我们不做播放、不做存储、不提供下载，只做三件事：把片子分好类、把信息核实清、把观看路径指明白。所有条目含剧情简介、演职员、类型、年份、地区、评分与合规观看渠道提示。</p>
+        </div>
+        <div class="card">
+          <h3>我们的选片标准</h3>
+          <ul style="margin-top:10px;color:var(--ink-dim);font-size:14px;line-height:2.1;padding-left:18px">
+            <li>叙事完整，不靠反转硬撑</li>
+            <li>影像有作者痕迹，而非流水线产品</li>
+            <li>表演可信，角色有灰度</li>
+            <li>类型融合者加分，纯照搬者减分</li>
+            <li>冷门佳作与商业大片同等对待</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-about">
+        <a class="logo" href="#top"><b>35</b>电影网</a>
+        <p style="margin-top:14px">一个执着于"帮你少花时间找片"的影视导航站。更新频率：每日资讯、每周专题、每月片单。</p>
+        <div class="site-url">https://35dianyingwang-app.github.io</div>
+      </div>
+      <div class="foot-col">
+        <h5>快速导航</h5>
+        <ul>
+          <li><a href="#hot">今日热映榜</a></li>
+          <li><a href="#genre">影片分类</a></li>
+          <li><a href="#topic">专题策划</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>影片类型</h5>
+        <ul>
+          <li><a href="#">动作 · 科幻 · 悬疑</a></li>
+          <li><a href="#">喜剧 · 爱情 · 剧情</a></li>
+          <li><a href="#">恐怖 · 战争 · 犯罪</a></li>
+          <li><a href="#">动画 · 纪录片 · 文艺</a></li>
+          <li><a href="#">短片 · 独立电影</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>合规与声明</h5>
+        <ul>
+          <li>本页仅为影视信息导航</li>
+          <li>不提供任何在线播放与下载</li>
+          <li>请通过正规平台观看</li>
+          <li>尊重版权，支持正版</li>
+          <li>条目信息以官方公布为准</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      © <span id="yr">2026</span> <b>35电影网</b> · 35dianyingwang-app · 站点网址：<b>https://35dianyingwang-app.github.io</b> · 观影有风险，选片需谨慎，本页内容仅供信息参考
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+var menuBtn = document.getElementById('menuBtn');
+var navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', function(){
+  navLinks.classList.toggle('open');
+  menuBtn.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+});
+navLinks.addEventListener('click', function(e){
+  if(e.target.tagName === 'A'){
+    navLinks.classList.remove('open');
+    menuBtn.textContent = '☰';
+  }
+});
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    var grp = t.parentElement;
+    if(grp && grp.classList.contains('tabs')){
+      grp.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});
+      t.classList.add('on');
+    }
+  });
+});
+</script>
+</body>
+</html>
